@@ -1,0 +1,50 @@
+name: poloco_env
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # Core utilities
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - samtools
+  - bcftools
+  - bwa
+  - fastp
+  - fastqc
+  - multiqc
+  - picard
+  - bedtools
+  - tabix
+  - htslib
+
+  # Assembly & QC
+  - megahit
+  - quast
+  - busco
+  - jellyfish
+  - kraken2
+  - blast
+
+  # SNP calling & population genomics
+  - angsd
+  - vcftools
+
+  # Repeat masking & annotation
+  - repeatmodeler
+  - repeatmasker
+  - braker2
+  - augustus
+  - interproscan
+  - eggnog-mapper
+
+  # R (for downstream analysis)
+  - r-base
+  - r-essentials
+  - r-ggplot2
+  - r-vegan
+  - r-patchwork
