@@ -1,0 +1,10 @@
+results/*
+logs/*
+*.bam
+*.sam
+*.fastq.gz
+*.fna
+*.fa
+*.fasta
+*.gz
+*.zip
