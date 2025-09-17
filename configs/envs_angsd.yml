@@ -1,0 +1,12 @@
+name: poloco_angsd
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - angsd
+  - vcftools
+  - bcftools
+  - htslib
+  - samtools
+

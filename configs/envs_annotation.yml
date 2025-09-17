@@ -1,0 +1,13 @@
+name: poloco_annotation
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - repeatmodeler
+  - repeatmasker
+  - braker2
+  - augustus
+  - eggnog-mapper
+  - interproscan
+

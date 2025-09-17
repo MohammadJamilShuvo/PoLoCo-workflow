@@ -1,0 +1,10 @@
+name: poloco_assembly
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - megahit
+  - busco
+  - jellyfish
+

@@ -1,0 +1,19 @@
+name: poloco_qc_mapping
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas
+  - matplotlib
+  - seaborn
+  - fastp
+  - fastqc
+  - multiqc
+  - bwa
+  - samtools
+  - bcftools
+  - bedtools
+  - picard
+
