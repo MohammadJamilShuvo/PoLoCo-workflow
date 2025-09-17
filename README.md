@@ -53,6 +53,11 @@ Step	Script	Tools	Conda Env	Output
 7. Validation	scripts/07_validation.sh	QUAST, FastANI	poloco_assembly	Assembly validation
 8. Annotation (optional)	scripts/08_annotation.sh	RepeatModeler, RepeatMasker, BRAKER2, eggNOG, InterProScan	poloco_annotation	Genome annotation
 
+<p align="center">
+  <img src="07_plots/workflow_diagram.png" alt="PoLoCo workflow diagram" width="700"/>
+</p>
+
+
 QC Python scripts are in qc_scripts/:
 
 fastp_qc.py – preprocess QC
