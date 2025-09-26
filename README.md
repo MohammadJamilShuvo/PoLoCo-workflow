@@ -1,7 +1,6 @@
-
-<img width="1890" height="1134" alt="Schematic_PoLoCo" src="https://github.com/user-attachments/assets/f2cd6376-6564-49d2-8886-786f766246b7" />
-# 🧬 PoLoCo Workflow  
+# 🧬 PoLoCo Workflow!
 **Reproducible pipeline for pooled draft genome assembly and Pool-Seq SNP analysis of non-model invertebrates**  
+![Schematic_PoLoCo](https://github.com/user-attachments/assets/ef1b0f60-ce2b-40bd-8639-f7e089442514)
 
 ---
 
