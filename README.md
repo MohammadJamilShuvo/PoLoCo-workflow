@@ -1,8 +1,7 @@
 # 🧬 PoLoCo Workflow!
 **Reproducible pipeline for pooled draft genome assembly and Pool-Seq SNP analysis of non-model invertebrates**  
 
-![Schematic_PoLoCo](https://github.com/user-attachments/assets/9934282d-c3a8-4638-a1f7-10ddbd8a863c)
-
+![workflow](https://github.com/user-attachments/assets/20c36866-0dfd-4626-a3d5-9b92721b1bf1)
 
 ---
 
