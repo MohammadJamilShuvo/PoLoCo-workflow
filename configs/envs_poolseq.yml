@@ -1,0 +1,14 @@
+name: poloco_poolseq
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python
+  - samtools
+  - bcftools
+  - htslib
+  - vcftools
+  - openjdk
+  - perl
+  - popoolation2
