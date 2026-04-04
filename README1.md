@@ -37,7 +37,7 @@ git clone git@github.com:MohammadJamilShuvo/PoLoCo-workflow.git
 cd PoLoCo-workflow
 ---
 
-2. Install environments
+## 2. Install environments
 
 PoLoCo uses modular conda environments to avoid dependency conflicts.
 
