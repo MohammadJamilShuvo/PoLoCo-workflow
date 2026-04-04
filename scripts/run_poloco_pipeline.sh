@@ -14,29 +14,28 @@
 # Usage:
 #   sbatch scripts/run_poloco_pipeline.sh --step all
 #   sbatch scripts/run_poloco_pipeline.sh --step 1
-#   sbatch scripts/run_poloco_pipeline.sh --step 3
+#   sbatch scripts/run_poloco_pipeline.sh --step 4
 #
 # Steps:
 #   1 = Preprocessing & QC
 #   2 = Mapping & BAM filtering
 #   3 = Coverage estimation
-#   4 = ANGSD SNP calling
-#   5 = QC visualization
+#   4 = Pool-seq sync generation + filtering
+#   5 = Pool-seq QC visualization
 #   6 = Genome assembly
 #   7 = Assembly validation
 #   8 = Annotation (optional)
 #
 # Conda environments:
-#   poloco_qc_mapping  -> steps 1, 2, 3
-#   poloco_angsd       -> steps 4, 5
+#   poloco_env         -> steps 1, 2
+#   poloco_qc_mapping  -> step 3
+#   poloco_poolseq     -> steps 4, 5
 #   poloco_assembly    -> steps 6, 7
 #   poloco_annotation  -> step 8
 # ===============================
 
-# Default: run all steps
 STEP="all"
 
-# Parse arguments
 while [[ $# -gt 0 ]]; do
   case $1 in
     --step)
@@ -57,22 +56,21 @@ run_step() {
         1) bash scripts/01_preprocessing_qc.sh ;;
         2) bash scripts/02_mapping_dedup_filter.sh ;;
         3) bash scripts/03_coverage_depth.sh ;;
-        4) bash scripts/04_angsd_snp_calling.sh ;;
+        4) bash scripts/04_poolseq_pipeline.sh ;;
         5) bash scripts/05_qc_visualization.sh ;;
         6) bash scripts/06_assembly.sh ;;
         7) bash scripts/07_validation.sh ;;
         8) bash scripts/08_annotation.sh ;;
-        *) echo "[ERROR] Unknown step: $step" ;;
+        *) echo "[ERROR] Unknown step: $step"; exit 1 ;;
     esac
 }
 
 if [[ "$STEP" == "all" ]]; then
     for i in {1..8}; do
-        run_step $i
+        run_step "$i"
     done
 else
-    run_step $STEP
+    run_step "$STEP"
 fi
 
 echo "[OK] Pipeline finished."
-
