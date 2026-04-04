@@ -7,23 +7,28 @@
 #SBATCH --error=logs/05_qcplots_%j.err
 
 # ===============================
-# Step 5: SNP QC & Visualization
+# Step 5: Pool-seq QC & Visualization
 # Tools: Python (custom scripts)
-# Conda env: poloco_angsd
+# Conda env: poloco_poolseq
 # ===============================
 
 source ~/miniconda3/etc/profile.d/conda.sh
-conda activate poloco_angsd
+conda activate poloco_poolseq
 
 PLOT_DIR="07_plots"
-mkdir -p $PLOT_DIR logs
+RESULT_DIR="PoPoolation2/results"
 
-echo "[INFO] Running QC visualization scripts..."
+mkdir -p "${PLOT_DIR}" logs
+
+echo "[INFO] Running Pool-seq QC visualization scripts..."
+
+if [[ ! -f "${RESULT_DIR}/geno_AF_matrix_LD_MAF05.csv" ]]; then
+    echo "[ERROR] Missing final dataset: ${RESULT_DIR}/geno_AF_matrix_LD_MAF05.csv"
+    exit 1
+fi
 
 python qc_scripts/alignment_qc.py
-python qc_scripts/angsd_sfs_maf_qc.py
-python qc_scripts/angsd_summary_stats_qc.py
-python qc_scripts/final_qc_master.py
+python qc_scripts/poolseq_af_qc.py
+python qc_scripts/poolseq_summary_stats_qc.py
 
 echo "[OK] QC visualization finished."
-
