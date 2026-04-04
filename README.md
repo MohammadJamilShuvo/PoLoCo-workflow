@@ -1,6 +1,5 @@
-[README_updated.md](https://github.com/user-attachments/files/26483827/README_updated.md)
-# 🧬 PoLoCo Workflow
-**Reproducible pipeline for pooled draft genome assembly and PoPoolation2-based Pool-seq allele-frequency analysis of non-model invertebrates**
+# 🧬 PoLoCo Workflow!
+**Reproducible pipeline for pooled draft genome assembly and Pool-seq allele-frequency analysis of non-model invertebrates**  
 
 ![workflow](https://github.com/user-attachments/assets/20c36866-0dfd-4626-a3d5-9b92721b1bf1)
 
