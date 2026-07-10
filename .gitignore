@@ -1,0 +1,19 @@
+results/*
+logs/*
+*.bam
+*.sam
+*.fastq.gz
+*.fna
+*.fa
+*.fasta
+*.gz
+*.zip
+
+# Keep the fixed lightweight smoke-test FASTQ files in GitHub.
+!smoke_test/
+!smoke_test/data/
+!smoke_test/data/assembly/
+!smoke_test/data/pools/
+!smoke_test/data/assembly/*.fastq.gz
+!smoke_test/data/pools/*.fastq.gz
+
