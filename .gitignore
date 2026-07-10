@@ -20,3 +20,5 @@ logs/*
 # Smoke-test generated outputs
 smoke_test/output/
 smoke_test_run.log
+
+smoke_step*.log
