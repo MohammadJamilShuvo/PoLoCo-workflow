@@ -17,3 +17,6 @@ logs/*
 !smoke_test/data/assembly/*.fastq.gz
 !smoke_test/data/pools/*.fastq.gz
 
+# Smoke-test generated outputs
+smoke_test/output/
+smoke_test_run.log
