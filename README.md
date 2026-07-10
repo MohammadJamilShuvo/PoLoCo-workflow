@@ -525,6 +525,8 @@ The master runner executes all steps sequentially and should be run with `bash` 
 For SLURM batch execution, submit the numbered scripts separately after editing `configs/poloco_config.sh` for the selected dataset. For example:
 
 ```bash
+mkdir -p logs
+
 J0=$(sbatch --parsable scripts/00_check_inputs.sh full)
 J1=$(sbatch --parsable --dependency=afterok:${J0} scripts/01_preprocessing_qc.sh)
 J2=$(sbatch --parsable --dependency=afterok:${J1} scripts/02_assembly.sh)
