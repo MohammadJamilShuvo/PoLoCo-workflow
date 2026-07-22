@@ -961,7 +961,7 @@ Step 06 automatically detects `mpileup2sync.pl` after activating `poloco_poolseq
 conda run -n poloco_poolseq bash -lc 'command -v mpileup2sync.pl'
 ```
 
-If automatic discovery is not possible, set the absolute path in `configs/poloco_config.sh`:
+If automatic discovery is not possible, set the absolute path in the selected project-specific override:
 
 ```bash
 MPILEUP2SYNC="/absolute/path/to/mpileup2sync.pl"
