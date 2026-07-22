@@ -164,6 +164,9 @@ git rev-parse HEAD \
 cp configs/poloco_config.sh \
   "reproducibility_records/poloco_main_config_${timestamp}.sh"
 
+cp "${SITE_CONFIG}" \
+  "reproducibility_records/poloco_slurm_config_${timestamp}.sh"
+
 if [[ -n "${OVERRIDE_CONFIG}" ]]; then
     cp "${OVERRIDE_CONFIG}" \
       "reproducibility_records/poloco_override_config_${timestamp}.sh"
