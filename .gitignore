@@ -1,0 +1,51 @@
+results/*
+logs/*
+*.bam
+*.sam
+*.fastq.gz
+*.fna
+*.fa
+*.fasta
+*.gz
+*.zip
+
+# Keep the fixed lightweight smoke-test FASTQ files in GitHub.
+!smoke_test/
+!smoke_test/data/
+!smoke_test/data/assembly/
+!smoke_test/data/pools/
+!smoke_test/data/assembly/*.fastq.gz
+!smoke_test/data/pools/*.fastq.gz
+
+# Smoke-test generated outputs
+smoke_test/output/
+smoke_test_run.log
+
+smoke_step*.log
+# Additional PoLoCo generated directories
+reproducibility_records/
+01_raw_reads/
+02_trimmed_reads/
+02_fastqc_reports/
+03_alignments/
+04_bam_filtered/
+05_coverage/
+07_plots/
+08_assembly/
+09_validation/
+PoPoolation2/
+ref/
+busco_downloads/
+projects/
+
+# Additional alignment and run files
+*.bai
+*.cram
+*.crai
+*.out
+*.err
+
+# Site- and user-specific local configuration
+configs/slurm_config.sh
+configs/poloco_user_config.sh
+configs/my_project_config.sh
