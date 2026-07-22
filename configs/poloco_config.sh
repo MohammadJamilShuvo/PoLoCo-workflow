@@ -6,8 +6,8 @@
 # Default values reproduce the Entomobrya nivalis case study:
 # 1 assembly pool, 82 Pool-seq libraries, MINPOP 55/82,
 # MAF 0.05, and 200 bp distance thinning.
-# For a new project, edit project label, input folders,
-# reference paths, thresholds, and PoPoolation2 path if needed.
+# For a new project, copy configs/poloco_user_config.example.sh
+# and edit the copied project-specific override instead of this file.
 # ============================================================
 
 set -u
