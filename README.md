@@ -28,9 +28,6 @@ The workflow was developed for the *Entomobrya nivalis* case study described in 
 
 ---
 
-<details>
-<summary><strong>Repository structure</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
 ## Repository structure
 
 The main folders are:
