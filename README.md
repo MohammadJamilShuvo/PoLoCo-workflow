@@ -1187,6 +1187,7 @@ warning: setlocale: LC_ALL: cannot change locale
 These warnings do not affect PoLoCo results when the workflow continues normally and the expected output files are produced.
 
 ---
+<!-- POLOCO_COLLAPSE_END -->
 
 ## Reproducibility records
 
