@@ -1188,11 +1188,6 @@ These warnings do not affect PoLoCo results when the workflow continues normally
 
 ---
 
-<!-- POLOCO_COLLAPSE_END -->
-</details>
-<details>
-<summary><strong>Reproducibility records</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
 ## Reproducibility records
 
 For a documented analysis, retain:
@@ -1211,22 +1206,12 @@ The fixed smoke test is intended as the first installation check. It should comp
 
 ---
 
-<!-- POLOCO_COLLAPSE_END -->
-</details>
-<details>
-<summary><strong>🙌 Contributing</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
 ## 🙌 Contributing
 
 Contributions, bug reports, and feature requests are welcome. Please open an issue or pull request on GitHub.
 
 ---
 
-<!-- POLOCO_COLLAPSE_END -->
-</details>
-<details>
-<summary><strong>📖 Citation</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
 ## 📖 Citation
 
 If you use this workflow, please cite:
@@ -1250,13 +1235,7 @@ Also cite the core tools used by the workflow:
 
 ---
 
-<!-- POLOCO_COLLAPSE_END -->
-</details>
-<details>
-<summary><strong>📜 License</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
 ## 📜 License
 
 This project is released under the MIT License.
-<!-- POLOCO_COLLAPSE_END -->
-</details>
+
