@@ -90,6 +90,7 @@ The repository includes a fixed lightweight smoke-test dataset (`smoke_test/data
 <summary><strong>⚙️ Installation</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
+
 ### 1. Clone the repository
 
 ```bash
@@ -215,7 +216,8 @@ conda activate poloco_qc_mapping
 <summary><strong>🧩 Configure the workflow</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-PoLoCo uses one permanent main configuration and optional dataset-specific override files:
+
+### PoLoCo uses one permanent main configuration and optional dataset-specific override files:
 
 ```text
 configs/poloco_config.sh
@@ -328,7 +330,8 @@ MINPOP_PROP=0.67
 <summary><strong>📥 Input data</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-PoLoCo requires **paired-end Illumina FASTQ files**. Inputs can be provided in four ways:
+
+### PoLoCo requires **paired-end Illumina FASTQ files**. Inputs can be provided in four ways:
 
 1. run the fixed lightweight smoke test included in the repository,
 2. use local FASTQ files,
@@ -713,7 +716,8 @@ Set `RUN_CONNECTIVITY_ANALYSIS="no"` when coordinates are unavailable. The fixed
 <summary><strong>📂 Workflow steps</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-The simplified PoLoCo core workflow is organized as follows. The assembly step also prepares the draft assembly as the mapping reference, so there is no separate reference-preparation step.
+
+### The simplified PoLoCo core workflow is organized as follows. The assembly step also prepares the draft assembly as the mapping reference, so there is no separate reference-preparation step.
 
 | Step | Script | Main tools | Environment | Main outputs |
 |---|---|---|---|---|
@@ -745,7 +749,8 @@ final_qc_master.py
 <summary><strong>🚀 Running the workflow</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-Before running PoLoCo:
+
+### Before running PoLoCo:
 
 1. install conda environments,
 2. prepare or download input FASTQ files,
@@ -940,7 +945,8 @@ sbatch --dependency=afterok:${J7} scripts/08_neutral_connectivity.sh
 <summary><strong>🧭 Neutral population structure and connectivity</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-Step 08 demonstrates how the allele-frequency matrix produced by PoLoCo can be used immediately for a concise population-genomic analysis. It performs:
+
+### Step 08 demonstrates how the allele-frequency matrix produced by PoLoCo can be used immediately for a concise population-genomic analysis. It performs:
 
 - principal component analysis of neutral allele-frequency variation;
 - spatial visualization of PC1;
@@ -988,7 +994,8 @@ bash scripts/run_poloco_pipeline.sh --step 08
 <summary><strong>📊 Main outputs</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-The main output folders are:
+
+### The main output folders are:
 
 ```text
 01_raw_reads/assembly/       raw paired-end reads for draft genome assembly
@@ -1046,7 +1053,8 @@ sed -E 's#.*/##; s/\.filtered\.bam$//' \
 <summary><strong>🧪 Downstream use</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
-PoLoCo outputs can be used for downstream analyses such as:
+
+### PoLoCo outputs can be used for downstream analyses such as:
 
 - PCA or ordination of allele-frequency variation,
 - pairwise genetic differentiation,
