@@ -214,7 +214,6 @@ conda activate poloco_qc_mapping
 <details>
 <summary><strong>🧩 Configure the workflow</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 🧩 Configure the workflow
 
 PoLoCo uses one permanent main configuration and optional dataset-specific override files:
 
@@ -328,7 +327,6 @@ MINPOP_PROP=0.67
 <details>
 <summary><strong>📥 Input data</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 📥 Input data
 
 PoLoCo requires **paired-end Illumina FASTQ files**. Inputs can be provided in four ways:
 
@@ -714,7 +712,6 @@ Set `RUN_CONNECTIVITY_ANALYSIS="no"` when coordinates are unavailable. The fixed
 <details>
 <summary><strong>📂 Workflow steps</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 📂 Workflow steps
 
 The simplified PoLoCo core workflow is organized as follows. The assembly step also prepares the draft assembly as the mapping reference, so there is no separate reference-preparation step.
 
@@ -747,7 +744,6 @@ final_qc_master.py
 <details>
 <summary><strong>🚀 Running the workflow</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 🚀 Running the workflow
 
 Before running PoLoCo:
 
@@ -943,7 +939,6 @@ sbatch --dependency=afterok:${J7} scripts/08_neutral_connectivity.sh
 <details>
 <summary><strong>🧭 Neutral population structure and connectivity</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 🧭 Neutral population structure and connectivity
 
 Step 08 demonstrates how the allele-frequency matrix produced by PoLoCo can be used immediately for a concise population-genomic analysis. It performs:
 
@@ -992,7 +987,6 @@ bash scripts/run_poloco_pipeline.sh --step 08
 <details>
 <summary><strong>📊 Main outputs</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 📊 Main outputs
 
 The main output folders are:
 
@@ -1051,7 +1045,6 @@ sed -E 's#.*/##; s/\.filtered\.bam$//' \
 <details>
 <summary><strong>🧪 Downstream use</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## 🧪 Downstream use
 
 PoLoCo outputs can be used for downstream analyses such as:
 
@@ -1065,10 +1058,9 @@ These are downstream uses of PoLoCo outputs and are not required for running the
 ---
 
 <!-- POLOCO_COLLAPSE_END -->
+
 </details>
-<details>
-<summary><strong>Troubleshooting</strong></summary>
-<!-- POLOCO_COLLAPSE_START -->
+
 ## Troubleshooting
 
 ### Conda is available on the login node but not inside a SLURM job
@@ -1186,9 +1178,6 @@ warning: setlocale: LC_ALL: cannot change locale
 These warnings do not affect PoLoCo results when the workflow continues normally and the expected output files are produced.
 
 ---
-<!-- POLOCO_COLLAPSE_END -->
-
-</details>
 
 ## Reproducibility records
 
