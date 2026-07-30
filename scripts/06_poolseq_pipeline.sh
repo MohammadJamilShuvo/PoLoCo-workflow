@@ -79,9 +79,14 @@ MPILEUP_TMP="${MPILEUP}.tmp.${SLURM_JOB_ID:-$$}"
 SYNC_TMP="${SYNC}.tmp.${SLURM_JOB_ID:-$$}"
 
 cleanup_temporary_files() {
-    rm -f "${MPILEUP_TMP:-}" "${SYNC_TMP:-}" "${SYNC_TMP:-}.params"
+    if [[ -n "${MPILEUP_TMP:-}" ]]; then
+        rm -f "${MPILEUP_TMP}"
+    fi
+
+    if [[ -n "${SYNC_TMP:-}" ]]; then
+        rm -f "${SYNC_TMP}" "${SYNC_TMP}.params"
+    fi
 }
-trap cleanup_temporary_files EXIT
 
 validate_mpileup() {
     local input_file="$1"
