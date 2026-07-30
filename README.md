@@ -89,7 +89,6 @@ The repository includes a fixed lightweight smoke-test dataset (`smoke_test/data
 <details>
 <summary><strong>⚙️ Installation</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
-## ⚙️ Installation
 
 ### 1. Clone the repository
 
