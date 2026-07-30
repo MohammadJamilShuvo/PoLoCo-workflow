@@ -1189,6 +1189,8 @@ These warnings do not affect PoLoCo results when the workflow continues normally
 ---
 <!-- POLOCO_COLLAPSE_END -->
 
+</details>
+
 ## Reproducibility records
 
 For a documented analysis, retain:
