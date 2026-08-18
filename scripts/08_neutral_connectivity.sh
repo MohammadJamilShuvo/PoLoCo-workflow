@@ -17,7 +17,7 @@ source "configs/poloco_config.sh"
 set +a
 
 if [[ "${RUN_CONNECTIVITY_ANALYSIS:-no}" != "yes" ]]; then
-    echo "[SKIP] Neutral population structure and connectivity analysis is disabled."
+    echo "[SKIP] Population structure and connectivity analysis is disabled."
     exit 0
 fi
 
@@ -64,7 +64,7 @@ fi
 mkdir -p "${CONNECTIVITY_DIR}" logs
 
 echo "============================================================"
-echo "PoLoCo neutral population structure and connectivity"
+echo "PoLoCo Population structure and connectivity"
 echo "============================================================"
 echo "[INFO] Allele-frequency matrix: ${AF_MATRIX}"
 echo "[INFO] BAM order: ${BAMLIST}"
