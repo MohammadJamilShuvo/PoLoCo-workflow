@@ -21,8 +21,8 @@ Usage:
   bash scripts/run_poloco_pipeline.sh --step 08
 
 Modes:
-  full          Run the complete case-study workflow through neutral connectivity analysis
-  poolseq-only  Run preprocessing, mapping, Pool-seq, QC, and neutral connectivity using an existing reference
+  full          Run the complete case-study workflow through population structure and connectivity analysis
+  poolseq-only  Run preprocessing, mapping, Pool-seq, QC, and population structure/connectivity using an existing reference
   assembly-only Run preprocessing, assembly/reference preparation, and validation
 
 Steps:
@@ -34,7 +34,7 @@ Steps:
   05 coverage estimation
   06 Pool-seq sync and allele-frequency matrix
   07 QC visualization
-  08 neutral population structure and connectivity
+  08 population structure and connectivity
 USAGE
 }
 
