@@ -19,7 +19,7 @@ The workflow supports:
 - **Pool-seq sync generation and allele-frequency matrix construction** using PoPoolation2 and configurable downstream filtering.
 - **QC summaries and visualization** for read quality, mapping, coverage, and final allele-frequency outputs.
 
-PoLoCo produces filtered SNP tables and allele-frequency matrices that can be used for downstream population-genomic or landscape-genomic analyses. The workflow itself focuses on reproducible data processing up to the allele-frequency matrix stage.
+PoLoCo produces filtered SNP tables and allele-frequency matrices that can be used for population-genomic or landscape-genomic analyses. The core processing workflow produces the allele-frequency matrix, and the optional final Step 08 demonstrates population structure and spatial-connectivity analysis directly from this output.
 
 The workflow was developed for the *Entomobrya nivalis* case study described in the manuscript:
 
@@ -129,7 +129,7 @@ These environments are used automatically by the workflow scripts.
 | `poloco_qc_mapping` | read preprocessing, FastQC/MultiQC, mapping, BAM filtering, coverage |
 | `poloco_poolseq` | mpileup/sync generation, Pool-seq filtering, allele-frequency matrix, QC summaries |
 | `poloco_assembly` | draft assembly and assembly validation |
-| `poloco_connectivity` | neutral population structure, spatial mapping, and isolation-by-distance analysis |
+| `poloco_connectivity` | population structure, spatial mapping, and isolation-by-distance analysis |
 
 The installer fixes the validated Pool-seq toolchain at samtools 1.23.1, htslib 1.23.1, and bcftools 1.23.1.
 
@@ -674,7 +674,7 @@ conda run -n poloco_poolseq python ena_example/download_poloco_ena_case_study_re
 Then create or update a project-specific override configuration for that dataset and run PoLoCo with `POLOCO_OVERRIDE_CONFIG`.
 
 
-### Coordinates for neutral population structure and connectivity
+### Coordinates for population structure and connectivity
 
 Step 08 uses the final allele-frequency matrix and the exact sample order stored in:
 
@@ -942,7 +942,7 @@ sbatch --dependency=afterok:${J7} scripts/08_neutral_connectivity.sh
 <!-- POLOCO_COLLAPSE_END -->
 </details>
 <details>
-<summary><strong>🧭 Neutral population structure and connectivity</strong></summary>
+<summary><strong>🧭 Population structure and connectivity</strong></summary>
 <!-- POLOCO_COLLAPSE_START -->
 
 
