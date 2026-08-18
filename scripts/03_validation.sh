@@ -43,6 +43,12 @@ if [[ -f "${PUBLISHED_REF}" ]]; then
     echo "[INFO] Running comparative QUAST..."
     quast.py "${REF_FASTA}" -r "${PUBLISHED_REF}" -o "${VALIDATION_DIR}/quast_vs_published" -t "${THREADS_VALIDATION}"
 
+    echo "[INFO] Running MUMmer dnadiff assembly comparison..."
+dnadiff \
+    -p "${VALIDATION_DIR}/${PROJECT_PREFIX}_dnadiff" \
+    "${PUBLISHED_REF}" \
+    "${REF_FASTA}"
+    
     echo "[INFO] Running FastANI..."
     fastANI -q "${REF_FASTA}" -r "${PUBLISHED_REF}" -o "${VALIDATION_DIR}/${PROJECT_PREFIX}_fastani.tsv" -t "${THREADS_VALIDATION}" || \
       echo "[WARN] FastANI did not complete successfully. See validation logs."
