@@ -918,7 +918,7 @@ Typical states:
 - `COMPLETED` with exit code `0:0`: successful;
 - `FAILED`, `OUT_OF_MEMORY`, `TIMEOUT`, or a non-zero exit code: inspect that step before resubmitting.
 
-Closing the terminal does not stop submitted batch jobs.
+Closing the terminal does not stop submitted batch jobs. Direct submission of the numbered workflow scripts with sbatch is not recommended. For SLURM batch execution, use hpc/submit_poloco_slurm.sh, which applies the site-specific configuration, preserves the repository working directory, initializes Conda within each compute job, and connects workflow steps with afterok dependencies. Individual workflow steps can instead be executed with bash scripts/run_poloco_pipeline.sh --step NN inside an interactive allocation when debugging or rerunning a specific step.
 
 For users who prefer to construct the dependency chain manually, the original approach remains valid after ensuring that Conda is available inside every job:
 
@@ -935,7 +935,7 @@ J6=$(sbatch --parsable --dependency=afterok:${J5} scripts/06_poolseq_pipeline.sh
 J7=$(sbatch --parsable --dependency=afterok:${J6} scripts/07_qc_visualization.sh)
 
 ```
-Direct submission of the numbered workflow scripts with sbatch is not recommended. For SLURM batch execution, use hpc/submit_poloco_slurm.sh, which applies the site-specific configuration, preserves the repository working directory, initializes Conda within each compute job, and connects workflow steps with afterok dependencies. Individual workflow steps can instead be executed with bash scripts/run_poloco_pipeline.sh --step NN inside an interactive allocation when debugging or rerunning a specific step.
+
 ---
 
 
