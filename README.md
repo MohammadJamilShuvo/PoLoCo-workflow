@@ -2,7 +2,8 @@
 
 **Reproducible workflow for pooled draft genome assembly and Pool-seq allele-frequency analysis of non-model invertebrates**
 
-![workflow](https://github.com/user-attachments/assets/20c36866-0dfd-4626-a3d5-9b92721b1bf1)
+<img width="4157" height="4157" alt="Schematic_PoLoCo" src="https://github.com/user-attachments/assets/3720326c-8e7c-4018-a3cc-a12e75204a28" />
+
 
 ---
 
