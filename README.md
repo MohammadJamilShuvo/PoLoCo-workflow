@@ -636,6 +636,8 @@ Input and configuration check completed
 
 For the complete 82-pool case study, the default `configs/poloco_config.sh` can be used. For a reduced ENA selection, create a separate override from `configs/poloco_user_config.example.sh` and reduce `MINPOP_ABS` or use proportional filtering before running the workflow.
 
+Published reference for comparative validation. To reproduce the optional assembly comparison in Step 03 for the E. nivalis case study, download the published assembly GCA_034695485.1 and place the FASTA at ref/ncbi_reference.fa. If this file is not supplied, PoLoCo still performs draft-only QUAST validation but skips comparative QUAST, MUMmer4/dnadiff, FastANI, and the reference-alignment plot.
+
 ### Option 4: Adapt the ENA example to another public ENA dataset
 
 Users with their own public ENA data can adapt:
